@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="coloring.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéDex</title>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+</head>
+<body onload="init()">
+    <div class="hidden" id="loading">
+        <img src="/img/loading.gif">
+        <h2>Refreshing...</h2>
+    </div>
+    <div class="hidden" id="error" onclick="toggleError()">
+        <img  src="/img/404.png">
+        <h2 id="error_message">Sorry, I couldn't find your Pokémon</h2>
+    </div>
+    <div class="hidden" id="bg_preventer" onclick="closePopup()"></div>
+    <header>
+        <img class="title" src="/img/logo_left.png">
+        <img class="logo" src="/img/logo.png">
+        <img class="title" src="/img/logo_right.png">
+    </header>
+    <div id="content">
+        <div class="hidden" id="infobox_big">
+            <div id="infobox_top">
+                <div class="column centered">
+                    <div id="ID_big"></div>
+                    <h1 id="name_big"></h1>
+                </div>
+                <div class="flex">
+                    <button class="button" onclick="previousPokemon()"><</button>
+                    <img id="img_big"></img>
+                    <button class="button" onclick="nextPokemon()">></button>
+                </div>
+                <img id="toggle_img" src="/img/toggle.png"></img>
+            </div>
+            <div id="info">
+                <div class="evenly">
+                    <div class="column">
+                        <span id="name"></span>
+                        <span id="height"></span>
+                        <span id="weight"></span>
+                        <div id="types_big"></div>
+                    </div>
+                    <div class="column">
+                        <span id="hp"></span>
+                        <span id="atk"></span>
+                        <span id="def"></span>
+                        <span id="sp_atk"></span>
+                        <span id="sp_def"></span>
+                        <span id="speed"></span>
+                    </div>
+                </div>                
+            </div>
+            <div id="evolutions"></div>
+        </div>
+        <div id="searchbar">
+            <input type="text" id="input" value="Pikachu">
+            <button class="button" onclick="search()">Search!</button>
+        </div>
+        <div id="infobox_small"></div>
+        <div id="more">
+            <button class="button" onclick="morePokemon()">Show me more!</button>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+<script src="fetchdata.js"></script>
+<script src="script.js"></script>
+<script src="template.js"></script>
+</html

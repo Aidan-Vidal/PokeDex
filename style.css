@@ -1,0 +1,244 @@
+@font-face {
+    font-family: "Genos";
+    src: url(/Genos-VariableFont_wght.ttf);
+}
+html {
+    font-family: Genos;
+}
+#close {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.hidden {
+    display: none !important;
+}
+.centered {
+    display: flex;
+    align-items: center;
+}
+#infobox_big {
+    position: fixed;
+    top: 32px;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+    padding: 36px;
+    border-style: solid;
+    border-width: 16px;
+    border-radius: 10px;
+    border-color: dimgray;
+    max-width: 80vw;
+    max-height: 80vh;
+    width: 640px;
+    height: auto;
+    overflow: auto;
+}
+#error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 64px;
+}
+#loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 64px;
+}
+body.loading {
+    cursor: wait;
+}
+#bg_preventer {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+    z-index: 9;
+    position: fixed;
+}
+#infobox_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+#types {
+    display: flex;
+    gap: 16px;
+}
+#evolutions img:hover {
+    cursor: pointer;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.evenly {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 80px;
+    border-style: solid;
+    padding: 16px;
+    margin: 16px 0;
+}
+.space_between {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#infobox_small {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1337px;
+    gap: 16px;
+    justify-content: center;
+}
+.infobox_small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-style: solid;
+    border-radius: 10px;
+    width: 240px;
+    padding: 32px 0;
+}
+.infobox_small:hover {
+    cursor: pointer;
+    filter: drop-shadow(8px 8px 10px gray);
+}
+h2 {
+    font-size: 36px;
+    margin: 0;
+}
+span {
+    font-size: 26px;
+}
+.evolution_img {
+    border-style: solid;
+    border-radius: 50px;
+    background-color: #9a9a9a;
+}
+.pokemon_img{
+    height: 120px !important;
+    padding-bottom: 16px;
+}
+#name_big {
+    font-size: 42px;
+}
+.img_ID {
+    height: 42px;
+}
+body {
+    margin: 0;
+    background-color: #464646;
+}
+body.no-scroll {
+    overflow: hidden;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-bottom: 28px;
+    width: auto;
+    padding: 36px 0;
+    background-color: #2f2f2f;
+}
+#evolutions{
+    display: flex;
+    justify-content: space-evenly;
+}
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+.title{
+    object-fit: contain;
+    height: 150px;
+    width: 100%;
+}
+.logo{
+    object-fit: cover;
+    height: 100%;
+}
+#ID {
+    height: 48px;
+}
+#ID img {
+    height: 100%;
+}
+.type {
+    border-style: solid;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 19px;
+    margin: 8px;
+    background-color: rgb(222, 222, 222);
+}
+footer {
+    height: 80px;
+    background-color: #2f2f2f;
+    margin-top: 24px;
+}
+#img {
+    height: 320px;
+}
+#searchbar {
+    text-align: center;
+    height: 80px;
+}
+#input {
+    height: 80%;
+    font-family: Leckerli;
+    text-align: center;
+    font-size: 36px;
+}
+.button {
+    height: 80%;
+    font-family: Leckerli;
+    text-align: center;
+    font-size: 36px;
+    cursor: pointer;
+}
+#more {
+    text-align: center;
+}
+#img_big {
+    height: 240px;
+    width: 240px;
+}
+#toggle_img {
+    height: 50px;
+    cursor: pointer;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+#types_big {
+    display: flex;
+    gap: 24px;
+    padding: 8px 0;
+}
