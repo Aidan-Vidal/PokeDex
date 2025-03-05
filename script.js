@@ -5,6 +5,7 @@ let currentlyDisplayed = 0;
 let typesArray = [];
 let fetchedPokemonObjects = [];
 let PokemonOnDisplay;
+let activeSearch = false;
 
 async function init() {
     await fetchAllTypes();
@@ -12,6 +13,12 @@ async function init() {
 }
 
 async function fetchPokemonData() {
+    loading();
+    if (activeSearch == true) {
+        fetchedPokemonObjects = [];
+        currentlyDisplayed = 0;
+        activeSearch = false;
+    }
     let result = await fetch(createURL());
     let objectArray = await result.json();
     for (let index = 0; index < objectArray.results.length; index++) {
@@ -36,6 +43,7 @@ function closePopup() {
 }
 
 async function fetchObject(Pokemon_name) {
+    loading();
     const result = await fetch(pokemonAPI + Pokemon_name);
     const PokemonObject = await result.json();
     preparePopup(PokemonObject);

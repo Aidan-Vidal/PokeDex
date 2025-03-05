@@ -1,4 +1,5 @@
 async function search() {
+    loading();
     if (document.getElementById('input').value.length < 3) {
         error_popup();
         document.getElementById('error_message').innerHTML = "Please type in at least 3 digits before searching!";
@@ -9,19 +10,18 @@ async function search() {
             error_popup();
             document.getElementById('error_message').innerHTML = "Sorry, I couldn't find your Pokémon!";
         } else {
-            document.getElementById('infobox_small').innerHTML = "";
-            currentlyDisplayed = 0;
+            activeSearch = true;
             buildSmallInfo();
         }
     }
+    loadingFinished();
 }
 
 async function searchCorrespondingPokemon(string) {
     fetchedPokemonObjects = [];
-    console.log(fetchedPokemonObjects);
     const result = await fetch(allPokemonAPI);
     const allPokemon = await result.json();
-    let objectArray = allPokemon.results.filter(object => object["name"].includes(string))
+    let objectArray = allPokemon.results.filter(object => object["name"].includes(string.toLowerCase()))
     for (let index = 0; index < objectArray.length; index++) {
         const Pokemon_name = objectArray[index].name;
         let result = await fetch(pokemonAPI + Pokemon_name);

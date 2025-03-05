@@ -1,13 +1,17 @@
 async function previousPokemon() {
+    loading();
     let previousPokemon = await fetch(pokemonAPI + (PokemonOnDisplay.id - 1));
     let PokemonObject = await previousPokemon.json();
     preparePopup(PokemonObject);
+    document.getElementById('prev_button').disabled = (PokemonOnDisplay.id == 1);
 }
 
 async function nextPokemon() {
+    loading();
     let nextPokemon = await fetch(pokemonAPI + (PokemonOnDisplay.id + 1));
     let PokemonObject = await nextPokemon.json();
     preparePopup(PokemonObject);
+    document.getElementById('prev_button').disabled = false;
 }
 
 function toggle_image() {

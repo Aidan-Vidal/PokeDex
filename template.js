@@ -10,11 +10,11 @@ function buildSmallInfo() {
     for (let index = 0; index < fetchedPokemonObjects.length; index++) {
         const PokemonObject = fetchedPokemonObjects[index];
         document.getElementById("infobox_small").innerHTML +=
-        `<div class="infobox_small" id="${PokemonObject.name}" onclick="fetchObject('${PokemonObject.name}')">
+        `<div class="infobox_small ${PokemonObject.types[0].type.name}" id="${PokemonObject.name}" onclick="fetchObject('${PokemonObject.name}')">
         <div id="ID_${PokemonObject.name}"></div>
         <h2 id="name_${PokemonObject.name}"></h2>
         <img src="" id="img_${PokemonObject.name}" class="pokemon_img"></img>
-        <div id="types_${PokemonObject.name}"></div></div>`;
+        <div id="types_${PokemonObject.name}"></div>`;
         fillSmallInfo(PokemonObject);
     }
 }
@@ -27,6 +27,7 @@ function fillSmallInfo(PokemonObject) {
         const type = PokemonObject.types[index].type.name;
         document.getElementById(`types_${PokemonObject.name}`).innerHTML = `<span class="type">${type}</span>`;
     }
+    loadingFinished();
 }
 
 function createImg_ID(num) {
@@ -59,4 +60,5 @@ function preparePopup(PokemonObject) {
         document.getElementById(`types_big`).innerHTML += `<span class="type ${type}">${type}</span>`;
     }
     fillEvolutionbar();
+    loadingFinished();
 }
