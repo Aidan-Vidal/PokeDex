@@ -6,22 +6,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokéDex</title>
-    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 </head>
 <body onload="init()">
     <div class="hidden" id="loading">
-        <img src="/img/loading.gif">
+        <img src="./img/loading.gif">
         <h2>Refreshing...</h2>
     </div>
     <div class="hidden" id="error" onclick="toggleError()">
-        <img  src="/img/404.png">
+        <img  src="./img/404.png">
         <h2 id="error_message">Sorry, I couldn't find your Pokémon</h2>
     </div>
     <div class="hidden" id="bg_preventer" onclick="closePopup()"></div>
     <header>
-        <img class="title" src="/img/logo_left.png">
-        <img class="logo" src="/img/logo.png">
-        <img class="title" src="/img/logo_right.png">
+        <img class="title" src="./img/logo_left.png">
+        <img class="logo" src="./img/logo.png">
+        <img class="title" src="./img/logo_right.png">
     </header>
     <div id="content">
         <div class="hidden" id="infobox_big">
@@ -35,7 +35,7 @@
                     <img id="img_big"></img>
                     <button class="button" onclick="nextPokemon()">></button>
                 </div>
-                <img id="toggle_img" src="/img/toggle.png"></img>
+                <img id="toggle_img" src="./img/toggle.png" onclick="toggle_image()"></img>
             </div>
             <div id="info">
                 <div class="evenly">
@@ -63,7 +63,7 @@
         </div>
         <div id="infobox_small"></div>
         <div id="more">
-            <button class="button" onclick="morePokemon()">Show me more!</button>
+            <button class="button" onclick="fetchPokemonData()">Show me more!</button>
         </div>
     </div>
     <footer></footer>
@@ -71,4 +71,6 @@
 <script src="fetchdata.js"></script>
 <script src="script.js"></script>
 <script src="template.js"></script>
+<script src="Bigbox.js"></script>
+<script src="search.js"></script>
 </html
