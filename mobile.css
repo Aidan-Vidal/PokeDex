@@ -36,6 +36,7 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        gap: 1px;
     }
     h2 {
         font-size: 30px;
@@ -51,19 +52,19 @@
         width: 75%;
     }
     #evolutions {
-        display: flex;
-        flex-direction: column;
-        height: 100px;
-        width: 100px;
         gap: 12px;
+    }
+    #evolutions img {
+        height: 65px;
+        width: 65px;
     }
     #infobox_big .evenly {
         gap: 5px;
         padding: 5px;
     }
     #img_big {
-        height: 130px;
-        width: 130px;
+        height: 110px;
+        width: 110px;
     }
     .infobox_big .button {
         width: 35px;
@@ -75,14 +76,33 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        max-height: fit-content;
+        padding: 18px;
+        top: 16px;
     }
     #infobox_top {
         width: 100%;
+        gap: 6px;
     }
     #ID_big {
         display: none;
     }
-    #close_button {
-        margin-top: 24px;
+    h1 {
+        margin: 0;
+    }
+    #toggle_img {
+        height: 40px;
+        width: 40px;
+    }
+    .button {
+        font-size: 20px;
+    }
+    .type {
+        padding: 1px;
+        font-size: 19px;
+        margin: 1px;
+    }
+    #loading {
+        display: none;
     }
 }
