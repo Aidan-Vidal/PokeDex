@@ -180,6 +180,7 @@ header {
 .logo{
     object-fit: cover;
     height: 100%;
+    padding: 0px 40px;
 }
 #ID {
     height: 48px;

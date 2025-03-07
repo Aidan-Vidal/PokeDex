@@ -44,11 +44,11 @@ function preparePopup(PokemonObject) {
     openPopup();
     document.getElementById(`name`).innerHTML = "Name: " + PokemonObject.name;
     document.getElementById(`hp`).innerHTML = "HP: " + PokemonObject.stats[0].base_stat;
-    document.getElementById(`atk`).innerHTML = "Attack: " + PokemonObject.stats[1].base_stat;
-    document.getElementById(`def`).innerHTML = "Defense: " + PokemonObject.stats[2].base_stat;
-    document.getElementById(`sp_atk`).innerHTML = "Special Attack: " + PokemonObject.stats[3].base_stat;
-    document.getElementById(`sp_def`).innerHTML = "Special Defense: " + PokemonObject.stats[4].base_stat;
-    document.getElementById(`speed`).innerHTML = "Speed: " + PokemonObject.stats[5].base_stat;
+    document.getElementById(`atk`).innerHTML = "Atk: " + PokemonObject.stats[1].base_stat;
+    document.getElementById(`def`).innerHTML = "Def: " + PokemonObject.stats[2].base_stat;
+    document.getElementById(`sp_atk`).innerHTML = "Sp Atk: " + PokemonObject.stats[3].base_stat;
+    document.getElementById(`sp_def`).innerHTML = "Sp Def: " + PokemonObject.stats[4].base_stat;
+    document.getElementById(`speed`).innerHTML = "Spd: " + PokemonObject.stats[5].base_stat;
     document.getElementById(`weight`).innerHTML = "Weight: " + PokemonObject.weight;
     document.getElementById(`height`).innerHTML = "Height: " + PokemonObject.height;
     document.getElementById('ID_big').innerHTML = createImg_ID(PokemonObject.id);
